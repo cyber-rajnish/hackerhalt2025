@@ -43,7 +43,7 @@
         }
         .info-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 8px rgba(0, 247, 169, 0.6), 0 0 20px rgba(0, 247, 169, 0.4);
         }
 
         .text-accent {
@@ -59,7 +59,7 @@
             color: #ffffff;
             border: 1px solid #00F7A9;
             transition: all 0.3s ease-in-out;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -273,6 +273,23 @@
                  </div>
             </section>
 
+            <section class="mb-16">
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="info-card text-center">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <h4 class="text-xl font-bold text-white mb-2">Date & Time</h4>
+                        <p class="text-gray-400">September 29th and 30th</p>
+                        <p class="text-gray-400">9am-5pm</p>
+                    </div>
+                    <div class="info-card text-center">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <h4 class="text-xl font-bold text-white mb-2">Location</h4>
+                        <p class="text-gray-400">Renaissance Atlanta Waverley</p>
+                        <p class="text-gray-400">Atlanta, GA</p>
+                    </div>
+                </div>
+            </section>
+
             <section class="my-16 text-center border-t border-b border-gray-700 py-12">
                 <h3 class="text-3xl font-bold text-white mb-8">Pay and Register Now For $650</h3>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-12">
@@ -286,7 +303,7 @@
                         <p class="font-bold text-accent mb-6">Scan to complete payment</p>
                     </div>
                 </div><br><br>
-		<h4 class="text-lg font-bold text-white mb-6 text-center">On Payment Completion, Please Fill Out The Google Form Attached Below, For A Successful Registration.</h4>
+		        <h4 class="text-lg font-bold text-white mb-6 text-center">On Payment Completion, Please Fill Out The Google Form Attached Below, For A Successful Registration.</h4>
             </section>
 
             <section class="my-16">
@@ -350,7 +367,7 @@
                 let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
                 let directionX = (Math.random() * .4) - .2;
                 let directionY = (Math.random() * .4) - .2;
-                let color = 'rgba(59, 130, 246, 0.6)';
+                let color = 'rgba(0, 247, 169, 0.6)';
                 particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
             }
         }
@@ -372,7 +389,7 @@
                     + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
                     if (distance < (canvas.width/7) * (canvas.height/7)) {
                         opacityValue = 1 - (distance/20000);
-                        ctx.strokeStyle = 'rgba(59, 130, 246,' + opacityValue + ')';
+                        ctx.strokeStyle = 'rgba(0, 247, 169,' + opacityValue + ')';
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -396,4 +413,3 @@
 
 </body>
 </html>
-
